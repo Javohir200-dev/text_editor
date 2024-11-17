@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Текстовый редактор</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="neon-text">Текстовый редактор</h1>
+        <a href="editor.html" class="anime-link">Создать новый документ</a>
+        <ul>
+            {% for document in documents %}
+                <li><a href="/document/{{ document[0] }}">{{ document[1] }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
